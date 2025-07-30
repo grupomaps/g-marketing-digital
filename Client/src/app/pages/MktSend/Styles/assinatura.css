@@ -1,0 +1,123 @@
+.bg-assinatura {
+  background: linear-gradient(150deg, #494ba7 50%, #25BFB2 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bg-infos-contrato {
+  background-color: #fff;
+  max-width: 1024px;
+
+}
+.page-break {
+  page-break-before: always; 
+}
+
+.header-assinatura img {
+  width: 95%;
+  height: 130px;
+}
+.dados-empresa h6 {
+  background-color: #59afd6;
+  padding: 10px;
+  color: #fff;
+}
+
+.dados-empresa p {
+  font-size: 15px;
+}
+
+.condicoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.condicoes .text-condicoes {
+  width: 900px;
+  font-size: 12px;
+  text-align: justify;
+  padding-inline: 20px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-container .arrow {
+  font-size: 70px;
+}
+
+.qrcode-assinatura{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qrcode-assinatura svg {
+  width: 150px;
+  height: 150px; 
+}
+
+.qrcode-assinatura p{
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bonus{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-assinatura{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.assinatura-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.linha-assinatura {
+  width: 300px; 
+  border-bottom: 2px solid #000;
+}
+
+.btns-sections{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+    color: black;
+    pointer-events: none; /* Desativa interatividade */
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

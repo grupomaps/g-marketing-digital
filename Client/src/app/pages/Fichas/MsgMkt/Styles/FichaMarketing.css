@@ -1,0 +1,258 @@
+.btn-sair-marketing {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.fichaMarketing {
+  height: 100vh;
+  background: linear-gradient(150deg, #494ba7 50%, #25BFB2 50%);
+}
+
+.certificado {
+  position: relative;
+  width: 82%;
+  height: 300px;
+  /* Ajuste conforme necessário */
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+}
+
+
+
+.selo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+.bg-mktservice {
+  background: linear-gradient(150deg, #494ba7 50%, #25BFB2 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bg-certificado {
+  background: linear-gradient(150deg, #494ba7 50%, #25BFB2 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bg-infos-mktservice {
+  background-image: url(../../../../../../public/img/certificado.png);
+  background-size: cover;
+  width: 850px;
+  height: 600px;
+  background-color: #fff;
+}
+
+.bg-infos-certificado {
+  background-image: url(../../../../../../public/img/meunegocio.jpg);
+  background-size: cover;
+  width: 850px;
+  height: 600px;
+  background-color: #fff;
+}
+
+.page-break {
+  page-break-before: always;
+}
+
+.header-assinatura img {
+  width: 95%;
+  height: 130px;
+}
+
+.dados-empresa h6 {
+  background-color: #59afd6;
+  padding: 10px;
+  color: #fff;
+}
+
+.dados-empresa p {
+  font-size: 15px;
+}
+
+.condicoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.condicoes .text-condicoes {
+  width: 900px;
+  font-size: 12px;
+  text-align: justify;
+  padding-inline: 20px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-container .arrow {
+  font-size: 70px;
+}
+
+.qrcode-mktservice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.qrcode-mktservice svg {
+  width: 200px;
+  height: 200px;
+  /* border: #F4B400 5px solid; */
+  /* padding: 10px; */
+}
+
+.bonus {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-assinatura {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.assinatura-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.linha-assinatura {
+  width: 300px;
+  border-bottom: 2px solid #000;
+}
+
+.btns-sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+    color: black;
+    pointer-events: none;
+    /* Desativa interatividade */
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+
+.text-avalie {
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.box-avaliacoes {
+  margin-top: 140px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.box-avaliacoes p {
+  font-size: large;
+  font-weight: 600;
+}
+
+.modo-pdf .box-avaliacoes {
+  margin-top: 0px !important;
+}
+
+.modo-pdf .box-avaliacoes p {
+  margin-top: 140px !important;
+}
+
+.box-certificado {
+  margin-top: 240px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.box-certificado p {
+  font-size: large;
+  font-weight: 600;
+}
+
+.modo-pdf .box-certificado {
+  margin-top: 0px !important;
+}
+
+.modo-pdf .box-certificado p {
+  margin-top: 240px !important;
+}
+
+
+.box-assinatura {
+  margin-top: 150px;
+  margin-left: 470px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.modo-pdf .box-assinatura {
+  margin-top: 0px!important;
+  margin-left: 0px!important;
+}
+
+.modo-pdf .box-assinatura p {
+  margin-top: 120px !important;
+  margin-left: 470px!important;
+}
+
+.modo-pdf * {
+  outline: 1px dashed red;
+}
+
+.container-mtkservice {
+  justify-content: center;
+  display: flex;
+  gap: 150px;
+}
+
+.razao-social {
+  font-size: x-large!important;
+  font-weight: 800!important;
+}
+
+.box-assinatura p {
+  font-size: 18px!important;
+  font-weight: 800!important;
+  color: #1f402e;
+}
+

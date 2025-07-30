@@ -1,0 +1,71 @@
+.btn-sair-marketing {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.fichaBoleto {
+  background: linear-gradient(150deg, #494ba7 50%, #25bfb2 50%);
+}
+
+.box-boleto {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.boleto-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+.carousel-control-prev-icon {
+  margin-left: -200px;
+}
+
+.carousel-control-next-icon {
+  margin-right: -200px;
+}
+
+.boletos-container.with-twelve .boleto-card p {
+  font-size: 12px !important;
+}
+
+.boletos-container.with-twelve .boleto-card a {
+  font-size: 12px !important;
+}
+
+.boletos-container.with-twelve .boleto-card button {
+  font-size: 12px !important;
+  padding: 5px 10px;
+}
+
+.carousel-indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-indicators button {
+  background-color: #007bff!important; 
+  color: white;
+  margin: 0 5px;
+  padding: 2px!important; 
+  font-size: 16px; 
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center; 
+}
+.carousel-indicators button:hover {
+  background-color: #000000!important; 
+}
+
+.carousel-indicators button.active {
+  background-color: #007bff!important; 
+}

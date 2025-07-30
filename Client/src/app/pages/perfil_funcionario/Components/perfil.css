@@ -1,0 +1,268 @@
+.profile {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bg-perfil {
+    background-image: url(../../../Assets/bg-perfil.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(55%);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.btn-voltar-perfil{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    scale: 1.2;
+}
+
+.crm-profile {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 70%;
+    height: 80vh;
+}
+
+.profile-header {
+    background: #0044cc;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.profile-title {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.profile-email {
+    font-size: 1rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.profile-email .icon-email {
+    margin-right: 10px;
+}
+
+.profile-details {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.profile-details h2 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile-details-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.info {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0044cc20;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info h4 {
+    font-size: 14px;
+    color: #0044cc;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+
+.profile-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-list{
+    position: relative;
+}
+
+.mystic-veil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .command-center {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .exit-button {
+    background: #ff4d4d; /* Cor de fundo vermelho */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 8px 12px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-weight: bold; /* Negrito */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  }
+  
+  .exit-button:hover {
+    background: #ff1a1a; /* Cor de fundo ao passar o mouse */
+  }
+  
+  .user-profile {
+    margin: 10px 0;
+  }
+  
+  .styled-select {
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    width: 100%; /* Largura total */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #f9f9f9; /* Fundo claro */
+    transition: border-color 0.3s; /* Transição suave para a cor da borda */
+  }
+  
+  .styled-select:hover {
+    border-color: #888; /* Borda mais escura ao passar o mouse */
+  }
+  
+  .styled-select:focus {
+    outline: none; /* Remove a borda padrão de foco */
+    border-color: #007bff; /* Borda azul ao focar */
+  }
+  
+  .search-perfil {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; 
+  }
+  
+  .paginationn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+  }
+  
+  .arrow-button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+  }
+  
+  .arrow-button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+
+@media screen and (max-width: 992px) {
+    .profile {
+        overflow-y: scroll;
+        margin-left: 30px;
+    }
+
+    .crm-profile {
+        height: auto;
+        width: 100%;
+    }
+
+    .profile-footer button {
+        transform: translateY(0px);
+    }
+}

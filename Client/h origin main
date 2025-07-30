@@ -1,0 +1,9 @@
+[33m7a166b8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Merge branch 'master' of https://github.com/MarquesVitor01/CRM-Plataform-App
+[33m2819f87[m Adicionando a tela de login, seção dos setores e a navbar
+[33m28fb6a9[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m Mensagem de commit nova
+[33m5327941[m Mensagem de commit nova
+[33m0bca551[m[33m ([m[1;31mupstream/main[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m first commit
+[33mb9936f8[m feat: tela login
+[33m8a711c1[m feat: add routes
+[33m66cbf3b[m refactor: initial settup
+[33mf9084b7[m Initialize project using Create React App

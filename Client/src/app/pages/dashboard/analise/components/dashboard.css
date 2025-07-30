@@ -1,0 +1,377 @@
+.bg-dash {
+    height: 100vh;
+    background-color: #0000ab17;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.header-dash {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 14px;
+    color: #fff;
+}
+
+.bemvindo-text {
+    display: flex;
+    align-items: center;
+    color: #000;
+    gap: 20px;
+}
+
+.bemvindo-text img {
+    width: 50px;
+    height: 50px;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.search-input {
+    width: 50%;
+    padding: 12px 20px 12px 10px;
+    border-radius: 0 30px 30px 0;
+    border: 1px solid #464E80;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #464E80;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
+    border: 1px solid #464E80;
+    background-color: #464E80;
+    color: white;
+    border-radius: 30px 0 0 30px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #232638;
+}
+
+.header-info {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px!important; 
+    border: 1px solid #ddd; 
+}
+
+.info-item {
+    text-align: center;
+    flex: 1;
+    position: relative; 
+    padding: 0 20px; 
+}
+
+.info-item h3 {
+    font-size: 18px;
+    color: #464E80;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px; 
+    height: 90%; 
+    background-color: #00000040; 
+    transform: translateX(50%); 
+}
+
+/* List Dashboard Styles */
+.list-dashboard {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    padding-inline:20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.table td {
+    font-size: 16px;
+    padding-block: 18px!important;
+}
+
+tbody tr:last-of-type td {
+    border-bottom: none;
+}
+
+.table .action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #464E80;
+    font-size: 18px;
+}
+
+/* Header List Styles */
+.header-list {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-content h2 {
+    font-size: 24px;
+    color: #252d5e;
+    margin: 0;
+    width: 20%;
+}
+
+.selects-container {
+    display: flex;
+    gap: 15px;
+}
+
+.create-btn {
+    background-color: #1945d6; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.create-btn:hover {
+    background-color: #112f92;
+}
+
+
+.remove-btn {
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.remove-btn:hover {
+    background-color: #9b1a26;
+}
+
+.filtros-btn {
+    background-color: #ffc107;
+    color: black; 
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.filtros-btn:hover {
+    background-color: #e0a800; 
+}
+
+.clear-btn {
+    background-color: #6c757d;
+    color: black; 
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.concluido-btn {
+    background-color: #1945d6;  
+    color: black; 
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.clear-btn:hover {
+    background-color: #575e64; 
+}
+.planilha-btn {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.planilha-btn:hover {
+    background-color: #218838; 
+}
+
+
+.table td.selected {
+    background-color: #5c5c5c;
+    color: #fff;
+}
+
+.checkbox-table {
+    appearance: none; 
+    width: 16px; 
+    height: 16px;
+    border: 1px solid #000; 
+    border-radius: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox-table:checked {
+    background-color: #921f1f;
+}
+.pagination {
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #464e80;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #3a3d70;
+}
+
+.pagination span {
+    align-self: center;
+    font-size: 16px;
+    color: #464e80;
+}
+
+.icon-container{
+    display: flex;
+    gap: 10px;
+}
+
+.icon-spacing{
+    cursor: pointer;
+}
+
+.icon-spacing:hover{
+    transform: translateY(-2px);
+    margin-left: -2px;
+}
+
+.chat-conversa .btn-info {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    animation: chat 2s ease-in-out infinite;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-conversa .btn-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes chat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Modal Excel */
+
+
+.modal-excel{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-modal-excel{
+    background-color: #fff;
+    width: 60vh;
+    height: 75vh;
+    border-radius: 20px;
+}
+
+.btn-fechar-excel{
+    position: absolute;
+    transform: translateY(-30px);
+    left: 62%;
+}
+
+@media screen and (max-width:992px) {
+    .list-dashboard{
+        margin-left: 50px;
+    }
+}
+
+.concluida {
+    border-bottom: 3px solid #28a745!important;
+    color: #28a745!important;
+}
+  

@@ -1,0 +1,29 @@
+.btn-sair-marketing{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.fichaMarketing{
+    height: 100vh;
+    background: linear-gradient(150deg, #494ba7 50%, #25BFB2 50%); 
+}
+.certificado {
+    position: relative;
+    width: 82%;
+    height: 300px; /* Ajuste conforme necessário */
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+  }
+  
+
+  
+  .selo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
+  

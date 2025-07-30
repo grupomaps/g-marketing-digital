@@ -1,0 +1,66 @@
+/* modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff!important;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.preview-foto {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.input-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-upload {
+  background-color: #ccc!important;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-upload svg {
+  width: 50px;
+  height: 50px;
+  fill: #000;
+}
+
+.btn-upload:hover {
+  background-color: #bbb;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions .btn {
+  width: 48%;
+}

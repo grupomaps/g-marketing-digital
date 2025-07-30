@@ -1,0 +1,81 @@
+.contrato {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #64e1dc, #005fc3);
+}
+
+.contrato label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.title-contrato {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background-color: #003670;
+  padding-block: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-contrato .img-header{
+  position: absolute;
+  right: 20%;
+}
+
+.title-contrato .logotipo-adicao{
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+
+.icon-troca {
+  transition: transform 0.3s ease;
+}
+
+.icon-troca.rotated {
+  transform: rotate(360deg);
+}
+
+.textarea-resizable {
+  resize: both;
+  overflow: auto;
+}
+
+.form-check {
+  border: 1px solid #fff;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.scroll-tabela {
+  max-height: 300px; /* Ajuste como quiser */
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #bcbcbc transparent;
+}
+
+/* Scrollbar para navegadores baseados em WebKit */
+.scroll-tabela::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-tabela::-webkit-scrollbar-thumb {
+  background-color: #bcbcbc;
+  border-radius: 10px;
+}
+
+.scroll-tabela::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",  // Ou "esnext" para navegadores mais modernos
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,  // Pode definir como false se o projeto for totalmente em TypeScript
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,  // Força checagens mais rígidas, bom para evitar bugs
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",  // Usa ESNext para o sistema de módulos
+    "moduleResolution": "node",  // Permite resolução de módulos pelo Node.js
+    "resolveJsonModule": true,  // Para importar arquivos .json diretamente
+    "isolatedModules": true,  // Necessário em projetos React com módulos
+    "noEmit": true,  // Não gera arquivos de saída, apenas checa os tipos
+    "jsx": "react-jsx"  // Suporta JSX do React
+  },
+  "include": [
+    "src",
+    "types/**/*"
+, "src/app/pages/Comprovantes/Components", "src/app/pages/Comprovantes/Comprovantes.tsx"  ]
+}

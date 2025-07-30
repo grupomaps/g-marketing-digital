@@ -1,0 +1,9 @@
+.cobranca{
+    height: 100vh;
+    background: linear-gradient(150deg, #494ba7 50%, #25BFB2 50%); 
+}
+
+.card-cob{
+    width: 450px!important;
+}
+

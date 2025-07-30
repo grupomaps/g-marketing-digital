@@ -1,0 +1,191 @@
+.bg-contrato {
+  background: linear-gradient(150deg, #494ba7 50%, #25bfb2 50%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.bg-infos-contrato {
+  background-color: #fff;
+}
+.page-break {
+  page-break-before: always; 
+}
+
+.dados-empresa h5 {
+  background-color: #59afd6;
+  color: #fff;
+}
+
+.dados-empresa p {
+  font-size: 15px;
+}
+.dados-empresa{
+  margin-top: -30px;
+}
+.header img {
+  width: 90%;
+  height: 10vh;
+}
+
+.condicoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.condicoes .text-condicoes {
+  width: 900px;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.text-cond{
+  text-align: justify!important;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-container .arrow {
+  font-size: 70px;
+}
+.cond-pagamento{
+  margin-top: -10px;
+}
+.bonus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -12px;
+}
+
+.bonus h5,
+.condicoes h5 {
+  width: 100%;
+  background-color: #59afd6;
+  color: #fff;
+}
+
+.condicoes p {
+  width: 700px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.bonus p {
+  width: 700px;
+  font-size: 12px;
+  
+}
+
+.upper p {
+  text-transform: uppercase !important;
+}
+
+.upper-span span {
+  text-transform: uppercase !important;
+}
+
+.boleto-container {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -25px;
+}
+.checkbox-blue {
+  accent-color: #007bff !important;
+  width: 18px;
+  height: 18px;
+  cursor: not-allowed;
+}
+.boleto-header {
+  display: flex;
+  justify-content: center;
+}
+
+.boleto-logo img {
+  width: 50px;
+}
+
+.gravacao {
+  display: flex;
+  gap: 20px;
+}
+
+.qrcode-container {
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.qrcode-google {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+  margin-bottom: -25px;
+}
+
+.termos-servico{
+  margin-top: -30px;
+}
+
+.check-termos{
+  margin-top: -20px;
+  
+}
+.img-google{
+  margin-top: -25px;
+}
+.qrcode-link {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajuste o espaço entre a imagem e o QR code */
+}
+
+.qrcode img {
+  width: 100px;
+}
+.assinatura-section {
+  margin-top: 0px !important;
+}
+.qrcode svg {
+  width: 70px; /* Tamanho do QR Code */
+  height: 70px; /* Tamanho do QR Code */
+}
+
+.obs {
+  font-size: 14px;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+    color: black;
+    pointer-events: none; /* Desativa interatividade */
+  }
+}
+
+.header p {
+  font-size: smaller;
+}
+
+.form-group-info {
+  margin-top: -15px;
+}
+
+
+.card-mensagem-custom {
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}

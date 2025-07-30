@@ -1,0 +1,79 @@
+.financeiro {
+  background: linear-gradient(150deg, #494ba7 50%, #25bfb2 50%);
+}
+
+.encaminheCob {
+  margin-top: 20px;
+}
+
+.card-parcelas {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.parcelas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.parcela-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #4e73df;
+  transition: transform 0.2s;
+}
+
+.parcela-box:hover {
+  transform: translateY(-3px);
+}
+
+.parcela-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.parcela-header h5 {
+  margin: 0;
+  color: #4e73df;
+  font-size: 1rem;
+}
+
+.parcela-body p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.parcela-body strong {
+  color: #5a5c69;
+}
+
+.scroll-container {
+  margin-top: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 transparent;
+}
+
+
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 4px;
+}
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
