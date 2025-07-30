@@ -28,18 +28,7 @@ export const HeaderDash: React.FC<HeaderDashProps> = ({
               <h3>Total de Clientes</h3>
               <p>{totalVendas}</p>
             </div>
-            <div className="col-md-3 info-item">
-              <h3>Total Realizados</h3>
-              <p>{totalRealizados}</p>
-            </div>
-            <div className="col-md-3 info-item">
-              <h3>Realizados Hoje</h3>
-              <p>{totalRealizadosDiario}</p>
-            </div>
-            <div className="col-md-3 info-item">
-              <h3>Pendentes Hoje</h3>
-              <p>{totalPendentesDiario}</p>
-            </div>
+            
           </div>
         </div>
       </div>

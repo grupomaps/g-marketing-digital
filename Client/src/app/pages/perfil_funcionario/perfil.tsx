@@ -357,11 +357,14 @@ export const Perfil: React.FC = () => {
       <ModalEditarFoto
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        onSave={async (newFotoUrl: string) => {
+        onSave={async (newFotoBase64: string) => {
           if (user) {
             const docRef = doc(db, "usuarios", user.uid);
-            await setDoc(docRef, { avatar: newFotoUrl }, { merge: true });
-            setPerfilData((prevData) => ({ ...prevData, avatar: newFotoUrl }));
+            await setDoc(docRef, { avatar: newFotoBase64 }, { merge: true });
+            setPerfilData((prevData) => ({
+              ...prevData,
+              avatar: newFotoBase64,
+            }));
           }
         }}
       />

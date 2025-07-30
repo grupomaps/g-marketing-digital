@@ -1,40 +1,35 @@
 import React, { useState } from "react";
-import { storage } from "../../../firebase/firebaseConfig"; 
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; 
 import "./modal.css";
 
 interface ModalEditarFotoProps {
   isOpen: boolean;
   onClose: () => void;
-  onSave: (newFotoUrl: string) => void; 
+  onSave: (newFotoBase64: string) => void;
 }
 
 const ModalEditarFoto: React.FC<ModalEditarFotoProps> = ({ isOpen, onClose, onSave }) => {
   const [previewFoto, setPreviewFoto] = useState<string | null>(null);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null); 
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const handleFotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0]; 
+      const file = e.target.files[0];
       setSelectedFile(file);
-      const newFotoUrl = URL.createObjectURL(file);
-      setPreviewFoto(newFotoUrl);
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64 = reader.result as string;
+        setPreviewFoto(base64);
+      };
+      reader.readAsDataURL(file); // lê como base64
     }
   };
 
   const handleSave = async () => {
-    if (selectedFile) {
-      const newFotoUrl = await uploadFoto(selectedFile); 
-      onSave(newFotoUrl); 
+    if (previewFoto) {
+      onSave(previewFoto); // envia o base64 direto
     }
     onClose();
-  };
-
-  const uploadFoto = async (file: File): Promise<string> => {
-    const storageRef = ref(storage, `images/${file.name}`); 
-    await uploadBytes(storageRef, file); 
-    const url = await getDownloadURL(storageRef); 
-    return url;
   };
 
   if (!isOpen) return null;
@@ -58,7 +53,7 @@ const ModalEditarFoto: React.FC<ModalEditarFotoProps> = ({ isOpen, onClose, onSa
             id="upload-foto"
             type="file"
             accept="image/*"
-            onChange={handleFotoChange} 
+            onChange={handleFotoChange}
             hidden
           />
         </div>
@@ -67,7 +62,7 @@ const ModalEditarFoto: React.FC<ModalEditarFotoProps> = ({ isOpen, onClose, onSa
           <button className="btn btn-secondary" onClick={onClose}>
             Cancelar
           </button>
-          <button className="btn btn-primary" onClick={handleSave}>
+          <button className="btn btn-primary" onClick={handleSave} disabled={!previewFoto}>
             Salvar
           </button>
         </div>

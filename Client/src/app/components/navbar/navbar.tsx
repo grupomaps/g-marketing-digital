@@ -160,7 +160,8 @@ export const Navbar = () => {
                 </li>
               )}
 
-            {/* {(cargo === "monitoria" ||
+            {(cargo === "monitoria" ||
+              cargo === "vendas" ||
               userId === adminId ||
               userId === supervisorId) && (
               <li className="nav-item">
@@ -173,7 +174,7 @@ export const Navbar = () => {
                   <span>Monitoria</span>
                 </Link>
               </li>
-            )} */}
+            )}
 
             {(cargo === "marketing" ||
               userId === adminId ||

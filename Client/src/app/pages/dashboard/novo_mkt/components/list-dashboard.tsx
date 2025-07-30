@@ -687,45 +687,8 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
                           className="icon-spacing text-dark"
                         />
                       </Link>
-                      <Link to={`/fichaboleto/${venda.id}`}>
-                        <FontAwesomeIcon
-                          icon={faMoneyCheckDollar}
-                          className="icon-spacing text-dark"
-                          data-tooltip-id="tooltip-boleto"
-                          data-tooltip-content="Ver ficha de boleto"
-                        />
-                        <Tooltip
-                          id="tooltip-boleto"
-                          place="top"
-                          className="custom-tooltip"
-                        />
-                      </Link>
-                      <Link to={`/fichamsgmarketing/${venda.id}`}>
-                        <FontAwesomeIcon
-                          icon={faMarker}
-                          className="icon-spacing text-dark"
-                          data-tooltip-id="tooltip-msg"
-                          data-tooltip-content="Mgs Marketing"
-                        />
-                        <Tooltip
-                          id="tooltip-msg"
-                          place="top"
-                          className="custom-tooltip"
-                        />
-                      </Link>
-                      <Link to={`/fichamsgmonitoria/${venda.id}`}>
-                        <FontAwesomeIcon
-                          icon={faMessage}
-                          className="icon-spacing text-dark"
-                          data-tooltip-id="tooltip-msg"
-                          data-tooltip-content="Msg Boas Vindas"
-                        />
-                        <Tooltip
-                          id="tooltip-msg"
-                          place="top"
-                          className="custom-tooltip"
-                        />
-                      </Link>
+                      
+                     
                       <Link
                         to={`/fichaposVenda/${venda.id}`}
                         data-tooltip-id="tooltip-posVenda-file"

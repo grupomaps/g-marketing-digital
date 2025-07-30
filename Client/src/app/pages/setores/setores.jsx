@@ -86,7 +86,7 @@ export const Setores = () => {
               <FontAwesomeIcon icon={faHeadset} className="sector-icon" />
               <h2>Pós Venda</h2>
               <p>Clique aqui para verificar o pós venda.</p>
-              <Link to="/pos-venda" className="btn-sector btn btn-primary">
+              <Link to="/novomarketing" className="btn-sector btn btn-primary">
                 Verificar Pós Venda
               </Link>
             </div>

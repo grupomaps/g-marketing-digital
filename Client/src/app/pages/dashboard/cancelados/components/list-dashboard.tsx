@@ -305,7 +305,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
           onApplyFilters={handleApplyFilters}
         />
       )}
-      {modalExclusao && (
+      {/* {modalExclusao && (
         <div className="modal-overlay">
           <div className="modal-exclusao">
             <div className="modal-header">
@@ -335,7 +335,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       <div className="header-list">
         <div className="header-content">
@@ -375,7 +375,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
               <Tooltip id="add-tooltip" place="top" className="custom-tooltip" />
             </Link> */}
 
-            {userId === adminUserId && (
+            {/* {userId === adminUserId && (
               <button
                 onClick={openModalExclusao}
                 className="remove-btn"
@@ -389,7 +389,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
                   className="custom-tooltip"
                 />
               </button>
-            )}
+            )} */}
 
             <button
               className="filtros-btn"

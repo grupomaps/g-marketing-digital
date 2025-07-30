@@ -588,20 +588,6 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
                         className="custom-tooltip"
                       />
                     </Link>
-
-                    <Link to={`/fichaboleto/${venda.id}`}>
-                      <FontAwesomeIcon
-                        icon={faMoneyCheckDollar}
-                        className="icon-spacing text-dark"
-                        data-tooltip-id="tooltip-boleto"
-                        data-tooltip-content="Ver ficha de boleto"
-                      />
-                      <Tooltip
-                        id="tooltip-boleto"
-                        place="top"
-                        className="custom-tooltip"
-                      />
-                    </Link>
                   </td>
                 </tr>
               ))}
