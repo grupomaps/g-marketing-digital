@@ -123,35 +123,39 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
   };
 
   const handleRemoveSelected = async () => {
-    if (selectedItems.size === 0 || !infoCancelamento.trim()) {
-      alert("Por favor, forneça um motivo para o cancelamento.");
-      return;
+  if (selectedItems.size === 0 || !infoCancelamento.trim()) {
+    alert("Por favor, forneça um motivo para o cancelamento.");
+    return;
+  }
+
+  const deletePromises = Array.from(selectedItems).map(async (id) => {
+    const vendaDoc = doc(db, "vendas", id);
+    const vendaData = (await getDoc(vendaDoc)).data();
+
+    if (vendaData) {
+      // Copia para a coleção "cancelados"
+      await setDoc(doc(db, "cancelados", id), {
+        ...vendaData,
+        infoCancelamento,
+        deletedAt: new Date(),
+      });
     }
 
-    const deletePromises = Array.from(selectedItems).map(async (id) => {
-      const vendaDoc = doc(db, "vendas", id);
-      const vendaData = (await getDoc(vendaDoc)).data();
+    await deleteDoc(vendaDoc);
+    await deleteDoc(doc(db, "financeiros", id));
+  });
 
-      if (vendaData) {
-        await setDoc(doc(db, "cancelados", id), {
-          ...vendaData,
-          infoCancelamento,
-          deletedAt: new Date(),
-        });
-      }
+  await Promise.all(deletePromises);
 
-      await deleteDoc(vendaDoc);
-    });
+  // Atualiza estado e fecha modal
+  setVendas((prevVendas) =>
+    prevVendas.filter((venda) => !selectedItems.has(venda.id))
+  );
+  setSelectedItems(new Set());
+  setInfoCancelamento("");
+  closeModalExclusao();
+};
 
-    await Promise.all(deletePromises);
-
-    setVendas((prevVendas) =>
-      prevVendas.filter((venda) => !selectedItems.has(venda.id))
-    );
-    setSelectedItems(new Set());
-    setInfoCancelamento("");
-    closeModalExclusao();
-  };
 
   const applyFilters = () => {
     const filteredClients = vendas.filter((venda) => {
