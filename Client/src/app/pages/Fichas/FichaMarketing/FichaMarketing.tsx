@@ -33,7 +33,7 @@ export const FichaMarketing: React.FC = () => {
     const fetchClientData = async () => {
       try {
         if (id) {
-          const docRef = doc(db, "vendas", id);
+          const docRef = doc(db, "marketings", id);
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
@@ -55,7 +55,7 @@ export const FichaMarketing: React.FC = () => {
   const handleMarketingSubmit = async (data: any) => {
     try {
       if (id) {
-        const docRef = doc(db, "vendas", id);
+        const docRef = doc(db, "marketings", id);
         await updateDoc(docRef, data);
         setClientData(data);
         console.log("Dados atualizados com sucesso!");

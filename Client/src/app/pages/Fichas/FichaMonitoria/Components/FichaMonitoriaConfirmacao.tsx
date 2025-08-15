@@ -125,12 +125,12 @@ export const FichaMonitoriaConfirmacao: React.FC<InfoConfirmacaoProps> = ({
             </div>
           )}
         </div> */}
-        {/* {form.qrcodeText && (
+        {form.linkGravacao && (
           <div className="mt-3 justify-content-center d-flex flex-column align-items-center">
             <h5>QR Code:</h5>
-            <QRCodeSVG value={form.qrcodeText} size={128} />
+            <QRCodeSVG value={form.linkGravacao} size={128} />
           </div>
-        )} */}
+        )}
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HeaderDash } from "./components/header-dash";
-import "../marketing/components/dashboard.css";
+import "../novo_mkt/components/dashboard.css";
 import { ListDashboard } from "./components/list-dashboard";
 
 export const NovoMkt = () => {

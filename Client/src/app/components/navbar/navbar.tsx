@@ -168,10 +168,10 @@ export const Navbar = () => {
                 <Link
                   className="nav-link icon-tooltip"
                   to="/monitoria"
-                  data-tooltip="Monitoria"
+                  data-tooltip="Auditoria"
                 >
                   <FontAwesomeIcon icon={faTachometerAlt} />
-                  <span>Monitoria</span>
+                  <span>Auditoria</span>
                 </Link>
               </li>
             )}

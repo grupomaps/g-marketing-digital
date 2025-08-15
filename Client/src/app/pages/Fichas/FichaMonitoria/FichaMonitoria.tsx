@@ -271,7 +271,7 @@ export const FichaMonitoria: React.FC = () => {
   return (
     <div className="ficha-monitoria">
       <form onSubmit={handleSubmit}>
-        {clientData && step === 0 && (
+        {/* {clientData && step === 0 && (
           <FichaMonitoriaQualidade
             form={clientData}
             handleInputChange={handleInputChange}
@@ -288,8 +288,8 @@ export const FichaMonitoria: React.FC = () => {
             form={clientData}
             handleInputChange={handleInputChange}
           />
-        )}
-        {clientData && step === 3 && (
+        )} */}
+        {clientData && step === 0 && (
           <FichaMonitoriaConfirmacao
             form={clientData}
             handleInputChange={handleInputChange}
@@ -297,7 +297,7 @@ export const FichaMonitoria: React.FC = () => {
           />
         )}
         <div className="mt-4 d-flex gap-4 justify-content-center">
-          {step === 0 && (
+          {/* {step === 0 && (
             <button
               type="button"
               className="btn btn-danger"
@@ -323,8 +323,8 @@ export const FichaMonitoria: React.FC = () => {
             >
               Próximo
             </button>
-          )}
-          {step <= 3 && (
+          )} */}
+          {step === 0 && (
             <button type="submit" className="btn btn-success">
               Salvar
             </button>

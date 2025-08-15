@@ -8,7 +8,6 @@ import {
   Perfil,
   Vendas,
   Monitoria,
-  Marketing,
   Relatorio,
   Add,
   EditContrato,
@@ -47,7 +46,6 @@ export const LocalRoutes: React.FC = () => {
           <Route path="/vendas" element={<PrivateRoute element={<Vendas />}/>} />
           <Route path="/cancelados" element={<PrivateRoute element={<Cancelados />} />} />
           <Route path="/monitoria" element={<PrivateRoute element={<Monitoria />} />} />
-          <Route path="/marketing" element={<PrivateRoute element={<Marketing />} />} />
           <Route path="/novomarketing" element={<PrivateRoute element={<NovoMkt />} />} />
           <Route path="/analises" element={<PrivateRoute element={<Analise />} />} />
           {/* <Route path="/pos-venda" element={<PrivateRoute element={<PosVenda />} />} /> */}
@@ -79,7 +77,7 @@ export const LocalRoutes: React.FC = () => {
 
 const NavbarWrapper: React.FC = () => {
   const location = useLocation();
-  const showNavbarRoutes = ["/vendas", "/monitoria", "/marketing", "/financeiro", "/cobranca", "/cancelados", "/pos-venda", "/analises", "/novomarketing"];
+  const showNavbarRoutes = ["/vendas", "/monitoria", "/financeiro", "/cobranca", "/cancelados", "/pos-venda", "/analises", "/novomarketing"];
 
   return showNavbarRoutes.includes(location.pathname) ? <Navbar /> : null;
 };

@@ -1,6 +1,5 @@
 export * from './dashboard/vendas/Vendas'
 export * from './dashboard/monitoria/Monitoria'
-export * from './dashboard/marketing/Marketing'
 export * from './login/Login'
 export * from './setores/setores'
 export * from './perfil_funcionario/perfil'

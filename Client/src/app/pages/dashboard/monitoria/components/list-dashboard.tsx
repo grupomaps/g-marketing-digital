@@ -228,7 +228,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
 
       <div className="header-list">
         <div className="header-content">
-          <h2>Monitoria</h2>
+          <h2>Auditoria</h2>
           <div className="search-container">
             <button
               className="search-button"

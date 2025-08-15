@@ -119,7 +119,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
         const nomeUsuario = userData.nome;
         setCargo(cargo);
 
-        const marketingsCollection = collection(db, "vendas");
+        const marketingsCollection = collection(db, "marketings");
         const marketingsSnapshot = await getDocs(marketingsCollection);
         const marketingsList = marketingsSnapshot.docs.map((doc) => ({
           id: doc.id,
@@ -128,7 +128,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
 
         let filteredVendas: Venda[] = [];
 
-        if (cargo === "adm" || cargo === "supervisor") {
+        if (cargo === "adm" || cargo === "supervisor" || cargo === "posVenda") {
           filteredVendas = marketingsList;
         } else if (cargo === "marketing") {
           filteredVendas = marketingsList.filter(
@@ -143,7 +143,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
           );
         }
 
-        setVendas(filteredVendas); // Isso vai atualizar o estado que é usado para renderizar
+        setVendas(filteredVendas);
         setMarketings(filteredVendas);
         setTotalMarketings(filteredVendas.length);
       } catch (error) {
@@ -388,7 +388,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
       )}
       <div className="header-list">
         <div className="header-content">
-          <h2>Novo Marketing</h2>
+          <h2>Marketing | Pós Venda</h2>
           <div className="search-container">
             <button
               className="search-button"
@@ -480,19 +480,6 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
             >
               <FontAwesomeIcon icon={faExclamation} />
             </button>
-
-            {/* <button
-               className="planilha-btn"
-               onClick={handleSyncClients}
-               disabled={syncLoading}
-               data-tooltip-id="tooltip-sync"
-               data-tooltip-content={
-                 syncLoading ? "Sincronizando..." : "Sincronizar clientes"
-               }
-             >
-               <FontAwesomeIcon icon={faSync} color="#fff" spin={syncLoading} />
-             </button> */}
-
             {cargo === "adm" && (
               <button
                 onClick={openModalExclusao}
@@ -677,49 +664,51 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
                         />
                       </Link>
 
-                      <Link
-                        to={`/fichamarketing/${venda.id}`}
-                        data-tooltip-id="tooltip-marketing-file"
-                        data-tooltip-content="Ficha de marketing"
-                      >
-                        <FontAwesomeIcon
-                          icon={faTableList}
-                          className="icon-spacing text-dark"
-                        />
-                      </Link>
-                      
-                     
-                      <Link
-                        to={`/fichaposVenda/${venda.id}`}
-                        data-tooltip-id="tooltip-posVenda-file"
-                        data-tooltip-content="Ficha de posVenda"
-                      >
-                        <FontAwesomeIcon
-                          icon={faTableList}
-                          className="icon-spacing text-dark"
-                          data-tooltip-id="tooltip-pos"
-                          data-tooltip-content="Acessar ficha Pós Venda"
-                        />
-                        <Tooltip
-                          id="tooltip-pos"
-                          place="top"
-                          className="custom-tooltip"
-                        />
-                      </Link>
-                      {/* <Link to={`/assinatura/${marketing.id}`}>
-                        <FontAwesomeIcon
-                          icon={faPrint}
-                          className="icon-spacing text-dark"
-                          data-tooltip-id="tooltip-assinatura"
-                          data-tooltip-content="Visualizar Assinatura"
-                        />
-                        <Tooltip
-                          id="tooltip-assinatura"
-                          place="top"
-                          className="custom-tooltip"
-                        />
-                      </Link> */}
+                      {cargo !== "posVenda" && (
+                        <Link
+                          to={`/fichamarketing/${venda.id}`}
+                          data-tooltip-id="tooltip-marketing-file"
+                          data-tooltip-content="Ficha de marketing"
+                        >
+                          <FontAwesomeIcon
+                            icon={faTableList}
+                            className="icon-spacing text-dark"
+                          />
+                        </Link>
+                      )}
+                      {cargo !== "marketing" && (
+                        <Link
+                          to={`/fichaposVenda/${venda.id}`}
+                          data-tooltip-id="tooltip-posVenda-file"
+                          data-tooltip-content="Ficha de posVenda"
+                        >
+                          <FontAwesomeIcon
+                            icon={faTableList}
+                            className="icon-spacing text-dark"
+                            data-tooltip-id="tooltip-pos"
+                            data-tooltip-content="Acessar ficha Pós Venda"
+                          />
+                          <Tooltip
+                            id="tooltip-pos"
+                            place="top"
+                            className="custom-tooltip"
+                          />
+                        </Link>
+                      )}
 
+                      <Link to={`/fichaboleto/${venda.id}`}>
+                        <FontAwesomeIcon
+                          icon={faMoneyCheckDollar}
+                          className="icon-spacing text-dark"
+                          data-tooltip-id="tooltip-boleto"
+                          data-tooltip-content="Ver ficha de boleto"
+                        />
+                        <Tooltip
+                          id="tooltip-boleto"
+                          place="top"
+                          className="custom-tooltip"
+                        />
+                      </Link>
                       <Tooltip
                         id="tooltip-view-contract"
                         place="top"
